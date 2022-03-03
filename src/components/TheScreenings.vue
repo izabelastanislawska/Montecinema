@@ -18,56 +18,10 @@ export default {
    data() {
      return {
        BASE_URL: 'http:/LocalHost:300/movies',
-    //    savedDataResponse: {},
-    //    model: {
-    //        movieTitle: '',
-    //        movieGenre: '',
-    //        moviePoster: '',
-    //        movieLength: ''
-    //    }
-    movieCard: [],
+        movieCard: [],
      }
    },
-//    created() {
-//        console.log("CREATED")
-//    },
-//    mounted() {
-//        console.log("MOUNTED")
-//        this.getData()
-//        this.fetchData()
-//    },
    methods: {
-    //    async getData() {
-    //        console.log(await axios.get(this.BASE_URL));
-    //    },
-    //    async getDataWithProps() {
-    //        const searchParams = new URLSearchParams("movieTitle=Harry Potter and the Philosopher's Stone")
-    //        console.log(await axios.get('${this.BASE_URL}?${searchParams.toString()}'));
-    //    },
-    //    fetchData() {
-    //        fetch(this.BASE_URL).then(resp => {
-    //            return resp.json()
-    //        }).then(data => {
-    //            console.log(data)
-    //        }).catch(error => {
-    //            console.error(error)
-    //        })
-    //     },
-    // async sendData() {
-    //    try {
-    //        const savedData = await axios.post(this.BASE_URL, this.model)
-    //        this.savedDataResponse = savedData
-    //    } catch (err) {
-    //        console.log(err)
-    //    } finally {
-    //        this.model = {
-    //         movieTitle: '',
-    //         movieGenre: '',
-    //         moviePoster: '',
-    //         movieLength: ''
-    //        }
-    //    }
-    // }
     async getMovies() {
         try {
             const response = await axios.get(this.BASE_URL);
