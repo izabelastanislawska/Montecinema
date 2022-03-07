@@ -16,16 +16,16 @@
         background-color: $button-hover-color;
         outline: 5px $email-color solid;  
     }
+}
 
-    &--small {
-        font-size: 1.6rem;
-        padding: 1.6rem 3rem;
-    }
+.button--small {
+    font-size: 1.6rem;
+    padding: 1.6rem 3rem;
+}
 
-    &--booking {
-        font-size: 1.8rem;
-        padding: 1.9rem;
-        width: 100%;
-        margin-bottom: 10rem;
-    }
+.button--booking {
+    font-size: 1.8rem;
+    padding: 1.9rem;
+    width: 100%;
+    margin-bottom: 10rem;
 }

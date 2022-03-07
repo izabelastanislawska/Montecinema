@@ -7,8 +7,8 @@
           <a href="#">Contact us</a>
         </div>
         <div class="header__menu">
-            <a href="#" class="header__link">Register</a>
-            <a href="#" class="button button--small">Login</a>
+            <router-link to="/register" class="header__link">Register</router-link>
+            <router-link to="/login" class="button button--small">Login</router-link>
         </div>
         <!-- <div>
     <h1>I'm header. Choose your path:</h1>
@@ -21,6 +21,7 @@
     </header>
   
 </template>
+
 
 <style lang="scss">
  .header {

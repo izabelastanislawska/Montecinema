@@ -25,16 +25,16 @@ export default {
    name: "TheScreenings",
    props: {
     title: {
-      type: String,
-      default: "movie",
+        type: String,
+        default: "movie",
     },
-    description: {
-      type: String,
-      default: "movie length",
+    length: {
+        type: String,
+        default: "movie length",
     },
     img: {
-      type: String,
-      default: "",
+        type: String,
+        default: "",
     },
     genre: {
         type: String,

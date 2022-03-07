@@ -3,7 +3,7 @@ import VueRouter from 'vue-router';
 import HomePage from '@/pages/HomePage.vue';
 import AboutPage from '@/pages/AboutPage';
 import ContactPage from '@/pages/ContactPage';
-import BlogPage from '@/pages/BlogPage';
+import LogInRegisterPage from '@/pages/LogInRegisterPage';
 import ThePost from '@/components/ThePost';
 
 const routes = [
@@ -23,9 +23,9 @@ const routes = [
     component: ContactPage
   }, 
   {
-    path: '/blog',
-    name: 'Blog',
-    component: BlogPage
+    path: '/login',
+    name: 'LogIn',
+    component: LogInRegisterPage
   },
   {
     path: '/blog/post/:number',
