@@ -2,18 +2,17 @@
     <section>
         <h1>Hi there!</h1>
         <span>Care to log in?</span>
-        <form @submit="onSubmit">
+        <form>
             <CustomInput 
                 v-model="email"
                 label="email"
                 placeholder="Enter your e-mail"
                 type="text"/>
-            <CustomInput
+            <PasswordInput
                 v-model="password"
                 label="password"
                 placeholder="Enter your password"
-                type="password"/>
-            
+                />
             <button>Register instead</button>
             <button
             type="submit"
@@ -24,10 +23,12 @@
 
 <script>
 import CustomInput from "@/components/CustomInput.vue";
+import PasswordInput from "@/components/PasswordInput.vue";
 
 export default {
     components: {
         CustomInput,
+        PasswordInput
     },
     data() {
         return {
@@ -37,10 +38,8 @@ export default {
         }
     },
     methods: {
-        onClick() {
+        onClick(event) {
             console.log(this.email,this.password)
-        },
-        onSubmit(event) {
             event.preventDefault();
         }
     }
