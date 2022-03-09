@@ -2,7 +2,7 @@
     <label >
         <span
             v-if="label"
-            class="base__label">
+            class="base-input__label">
             {{ label }}
         </span>
         <input 
@@ -10,8 +10,8 @@
             @input="$emit('input', $event.target.value)"
             :placeholder="placeholder"
             :type="type"
-            class="base__input">
-            
+            class="base-input__input">
+                
     </label>
 </template>
 
@@ -39,7 +39,7 @@
 </script>
 
 <style lang="scss">
-.base {
+.base-input {
     &__label {
         font-size: 1.4rem;
         font-weight: 700;
@@ -65,7 +65,7 @@
         border: none;
         outline: 1px $input-border-color solid;
         background-color: $input-background-color;
-}
+    }
 }
 
 </style>
