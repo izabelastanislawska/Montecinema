@@ -1,8 +1,9 @@
 import VueRouter from 'vue-router';
 
 import HomePage from '@/pages/HomePage.vue';
-import AboutPage from '@/pages/AboutPage';
 import ContactPage from '@/pages/ContactPage';
+import MoviesPage from '@/pages/MoviesPage';
+import ScreeningsPage from '@/pages/ScreeningsPage';
 import LogInRegisterPage from '@/pages/LogInRegisterPage';
 import ThePost from '@/components/ThePost';
 
@@ -13,15 +14,20 @@ const routes = [
     component: HomePage
   },
   {
-    path: '/about',
-    name: 'About',
-    component: AboutPage
-  },
-  {
     path: '/contact',
     name: 'Contact',
     component: ContactPage
   }, 
+  {
+    path: '/movies',
+    name: 'Movies',
+    component: MoviesPage
+  },
+  {
+    path: '/screenings',
+    name: 'Screenings',
+    component: ScreeningsPage
+  },
   {
     path: '/login',
     name: 'LogIn',

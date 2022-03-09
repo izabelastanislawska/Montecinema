@@ -1,7 +1,7 @@
 <template>
     <section>
         <MainHeader/>
-        <h1>You're on contact page</h1>
+        <h1>You're on movies page</h1>
     </section>
 </template>
 
