@@ -4,8 +4,9 @@ import HomePage from '@/pages/HomePage.vue';
 import ContactPage from '@/pages/ContactPage';
 import MoviesPage from '@/pages/MoviesPage';
 import ScreeningsPage from '@/pages/ScreeningsPage';
-import LogInRegisterPage from '@/pages/LogInRegisterPage';
+import LogInPage from '@/pages/LogInPage';
 import ThePost from '@/components/ThePost';
+import RegisterPage from '@/pages/RegisterPage';
 
 const routes = [
   {
@@ -31,7 +32,12 @@ const routes = [
   {
     path: '/login',
     name: 'LogIn',
-    component: LogInRegisterPage
+    component: LogInPage
+  },
+  {
+    path: '/register',
+    name: 'Register',
+    component: RegisterPage
   },
   {
     path: '/blog/post/:number',
