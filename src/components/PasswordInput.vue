@@ -11,12 +11,12 @@
                 :value="value"
                 @input="$emit('input', $event.target.value)"
                 :placeholder="placeholder"
-                :type="changeType"
+                :type="inputType"
                 class="base-input__input"> 
                 
                 <button title="Show password" class="button__password" @click="ShowHidePassword">
-                    <img src="@/assets/eyeCrossed.svg" alt="showPassword" :class="visible">
-                    <img src="@/assets/eye.svg" alt="hidePassword" class="hide" :class="unvisible">
+                    <img src="@/assets/eyeCrossed.svg" alt="Show password" v-if="!showPassword" >
+                    <img src="@/assets/eye.svg" alt="Hide password" v-else>
                 </button>
             
         </div>
@@ -37,36 +37,22 @@
             placeholder: {
                 type: String,
                 default: ''
-            },
-            type: {
-                type: String,
-                default: 'password'
             }
         },
         data() {
             return {
-                showPassword: false,
-                visibleEye: true,
-                unvisibleEye: true
+                showPassword: false
             }
         },
         methods: {
             ShowHidePassword(event) {
                 event.preventDefault();
                 this.showPassword = !this.showPassword;
-                this.visibleEye = !this.visibleEye;
-                this.unvisibleEye = !this.unvisibleEye;
             }
         },
         computed: {
-            changeType() {
+            inputType() {
                 return this.showPassword ? "text" : "password";
-            },
-            visible() {
-                return this.visibleEye ? "show" : "hide"
-            },
-            unvisible() {
-                return this.unvisibleEye ? "hide" : "show"
             }
         }
     }

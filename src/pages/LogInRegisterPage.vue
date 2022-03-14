@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import LogInRegisterHeader from '../components/LogInRegisterHeader.vue';
-import LogInCard from '../components/LogInCard.vue';
+import LogInRegisterHeader from '@/components/LogInRegisterHeader.vue';
+import LogInCard from '@/components/LogInCard.vue';
 
 
 export default {

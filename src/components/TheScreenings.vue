@@ -14,15 +14,27 @@
             <img :src="movie.poster_url" />
             
         </div>
+        <!-- <MovieCard
+            v-for:"movie in moviesCard"
+            :key="movie.id"
+            :title="movie.title"
+            :img="movie.poster_url"
+            :genre="movie.genre.name"
+        /> -->
 
     </section>
 </template>
 
 <script>
 import axios from "axios";
+// import MovieCard from "@/components/MovieCard.vue";
 
 export default {
-   name: "TheScreenings",
+    name: "TheScreenings",
+    components: {
+        // MovieCard
+    },
+   
    props: {
     title: {
         type: String,
@@ -43,7 +55,7 @@ export default {
   },
    data() {
      return {
-       BASE_URL: 'http://localhost:3000/movies',
+        BASE_URL: 'http://localhost:3000/movies',
         movieCard: [],
      }
    },
