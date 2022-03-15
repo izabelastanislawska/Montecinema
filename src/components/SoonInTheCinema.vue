@@ -9,33 +9,32 @@
                     <router-link to="/movies" class="movies__text movies__text--red">See All</router-link>
                 </div>
                 <div class="article__wrapper">
-                    <!-- <MovieCard/> -->
-                    
+
+                    <article class="article">
+                        <h3 class="article__header">Predator</h3>
+                        <p class="tag">1h 30min</p>
+                        <img src="@/assets/predator.png" alt="Predator" class="article__img">
+                        <p class="tag tag__red">Action</p>
+                    </article>
+
                     <article class="article">
                         <h3 class="article__header">Commando</h3>
+                        <p class="tag">1h 30min</p>
                         <img src="@/assets/commando.png" alt="Predator" class="article__img">
-                        <p class="article__text">A retired Special Forces colonel tries to save his daughter, who was abducted by his former subordinate.</p>
+                        <span class="tag tag__red">Action</span>
                     </article>
+
                     <article class="article">
                         <h3 class="article__header">Terminator 2</h3>
+                        <p class="tag">1h 30min</p>
                         <img src="@/assets/terminator.png" alt="Predator" class="article__img">
-                        <p class="article__text">A team of commandos on a mission in a Central American jungle find themselves hunted by an extraterrestrial warrior.</p>
+                        <p class="tag tag__red">Action</p>
                     </article>
+
                 </div>
             </div>
         </section>
 </template>
-
-<script>
-// import MovieCard from "@/components/MovieCard.vue";
-
-export default {
-    components: {
-        // MovieCard
-    }
-}
-
-</script>
 
 <style lang="scss">
 .movies {

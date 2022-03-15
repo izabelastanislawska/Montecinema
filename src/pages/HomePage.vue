@@ -14,8 +14,6 @@ import TheHero from '@/components/TheHero.vue';
 import SoonInTheCinema from '@/components/SoonInTheCinema';
 import TheScreenings from '@/components/TheScreenings.vue';
 
-
-
 export default {
   name: 'App',
   components: {

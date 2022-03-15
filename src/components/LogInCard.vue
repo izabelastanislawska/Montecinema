@@ -1,8 +1,10 @@
 <template>
-    <section>
-        <h1>Hi there!</h1>
-        <span>Care to log in?</span>
-        <form>
+    <section class="container login-register__wrapper">
+        <div class="header__wrapper">
+            <h1 class="header__big header--black">Hi there!</h1>
+            <h1 class="header__big header--grey">Care to log in?</h1>
+        </div>
+        <form class="">
             <CustomInput 
                 v-model="email"
                 label="email"
@@ -13,11 +15,12 @@
                 label="password"
                 placeholder="Enter your password"
                 />
-            <button>Register instead</button>
-            <button
+            <router-link to="/register" class="header__link"> Register instead</router-link>
+            <button class="button button--small"
             type="submit"
             @click="onClick">Log in</button>
         </form>
+        <p>Did you forgot you password? <a href="#">Reset it now</a></p>
     </section>
 </template>
 
@@ -45,3 +48,9 @@ export default {
     }
 }
 </script>
+
+<style lang="scss">
+
+
+
+</style>
