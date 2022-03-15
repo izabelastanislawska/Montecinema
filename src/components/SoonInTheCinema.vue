@@ -12,23 +12,24 @@
 
                     <article class="article">
                         <h3 class="article__header">Predator</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/predator.png" alt="Predator" class="article__img">
-                        <p class="tag tag__red">Action</p>
+                        <BaseTag text="Action" theme="tag--red"/>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Commando</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/commando.png" alt="Predator" class="article__img">
-                        <span class="tag tag__red">Action</span>
+                        <BaseTag text="Action" theme="tag--red"/>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Terminator 2</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/terminator.png" alt="Predator" class="article__img">
-                        <p class="tag tag__red">Action</p>
+                        <BaseTag text="Action" theme="tag--red"/>
+                        
                     </article>
 
                 </div>
@@ -36,7 +37,17 @@
         </section>
 </template>
 
-<style lang="scss">
+<script>
+    import BaseTag from "@/components/BaseTag.vue";
+
+    export default {
+        components: {
+            BaseTag
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
 .movies {
     margin: 4rem 0 14rem 0;
 }
@@ -88,8 +99,8 @@
     padding-top: 1rem;
 }
 .article__img {
-        width: 100%;
-        height: 191px;
-        object-fit: cover;
-    }
+    width: 100%;
+    height: 191px;
+    object-fit: cover;
+}
 </style>
