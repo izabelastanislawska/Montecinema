@@ -12,23 +12,23 @@
 
                     <article class="article">
                         <h3 class="article__header">Predator</h3>
-                        <BaseTag text="1h 30min">{{text}}</BaseTag>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/predator.png" alt="Predator" class="article__img">
-                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
+                        <BaseTag text="Action" theme="tag--red"/>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Commando</h3>
-                        <BaseTag text="1h30min">{{text}}</BaseTag>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/commando.png" alt="Predator" class="article__img">
-                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
+                        <BaseTag text="Action" theme="tag--red"/>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Terminator 2</h3>
-                        <BaseTag text="1h30min">{{text}}</BaseTag>
+                        <BaseTag text="1h 30min"></BaseTag>
                         <img src="@/assets/terminator.png" alt="Predator" class="article__img">
-                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
+                        <BaseTag text="Action" theme="tag--red"/>
                         
                     </article>
 
@@ -46,7 +46,8 @@
         },
         data() {
             return {
-                text: ""
+                text: "",
+                theme: "tag--red"
             }
         }
     }

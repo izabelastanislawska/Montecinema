@@ -1,11 +1,15 @@
 <template>
-    <p class="tag">{{ text }}</p>
+    <p class="tag" :class="theme">{{ text }}</p>
 </template>
 
 <script>
     export default {
         props: {
             text: {
+                type: String,
+                default: ''
+            },
+            theme: {
                 type: String,
                 default: ''
             }
