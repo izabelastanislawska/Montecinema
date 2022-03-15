@@ -43,12 +43,6 @@
     export default {
         components: {
             BaseTag
-        },
-        data() {
-            return {
-                text: "",
-                theme: "tag--red"
-            }
         }
     }
 </script>
@@ -105,15 +99,8 @@
     padding-top: 1rem;
 }
 .article__img {
-        width: 100%;
-        height: 191px;
-        object-fit: cover;
-}
-
-.tag--red {
-    background-color: $tag-color;
-    color: $tag-text-color;
-    border-radius: 25px;
-    padding: 0.8rem 1.6rem;
+    width: 100%;
+    height: 191px;
+    object-fit: cover;
 }
 </style>

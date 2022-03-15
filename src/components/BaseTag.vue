@@ -25,5 +25,18 @@
     margin: 2rem 0;
     color: $placeholder-color;
     display: inline-block;   
+    padding: 0.8rem 1.6rem;
+}
+
+.tag--red {
+    background-color: $tag-color;
+    color: $tag-text-color;
+    border-radius: 25px;
+}
+
+.tag--grey {
+    background-color: $placeholder-color;
+    border-radius: 25px;
+    color: $white-color;
 }
 </style>
