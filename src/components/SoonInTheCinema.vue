@@ -12,23 +12,24 @@
 
                     <article class="article">
                         <h3 class="article__header">Predator</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h 30min">{{text}}</BaseTag>
                         <img src="@/assets/predator.png" alt="Predator" class="article__img">
-                        <p class="tag tag__red">Action</p>
+                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Commando</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h30min">{{text}}</BaseTag>
                         <img src="@/assets/commando.png" alt="Predator" class="article__img">
-                        <span class="tag tag__red">Action</span>
+                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
                     </article>
 
                     <article class="article">
                         <h3 class="article__header">Terminator 2</h3>
-                        <p class="tag">1h 30min</p>
+                        <BaseTag text="1h30min">{{text}}</BaseTag>
                         <img src="@/assets/terminator.png" alt="Predator" class="article__img">
-                        <p class="tag tag__red">Action</p>
+                        <BaseTag text="Action" class="tag--red"> {{text}}</BaseTag>
+                        
                     </article>
 
                 </div>
@@ -36,7 +37,22 @@
         </section>
 </template>
 
-<style lang="scss">
+<script>
+    import BaseTag from "@/components/BaseTag.vue";
+
+    export default {
+        components: {
+            BaseTag
+        },
+        data() {
+            return {
+                text: ""
+            }
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
 .movies {
     margin: 4rem 0 14rem 0;
 }
@@ -91,5 +107,12 @@
         width: 100%;
         height: 191px;
         object-fit: cover;
-    }
+}
+
+.tag--red {
+    background-color: $tag-color;
+    color: $tag-text-color;
+    border-radius: 25px;
+    padding: 0.8rem 1.6rem;
+}
 </style>
