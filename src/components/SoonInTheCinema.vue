@@ -49,7 +49,7 @@
 
 <style lang="scss" scoped>
 .movies {
-    margin: 4rem 0 14rem 0;
+    margin: 4rem 0 5rem 0;
 }
 
 .movies__wrapper {
