@@ -1,7 +1,7 @@
 <template>
     <section class="container">
         <h1 class="header__big">Screenings:</h1>    
-        <h1 class="header__big header--grey"> {{ currentDate() }}</h1>
+        <h1 class="header__big header--grey"> {{ currentDate }}</h1>
         <!-- <h1 class="header__big header--grey"
             v-for="seances in seancesCard"
             :key="'s' + seances.id"
@@ -45,42 +45,42 @@ export default {
     components: {
         // MovieCard
     },
-   props: {
-    title: {
-        type: String,
-        default: "movie",
-    },
-    length: {
-        type: String,
-        default: "movie length",
-    },
-    img: {
-        type: String,
-        default: "",
-    },
-    genre: {
-        type: String,
-        default: "",
-    }
-  },
-   data() {
-     return {
-        MOVIES_URL: 'http://localhost:3000/movies',
-        // SEANCES_URL: 'http://localhost:3000/seances',
-        movieCard: [],
-        // seancesCard: []
-     }
-   },
-   methods: {
-    async getMovies() {
-        try {
-            const response = await axios.get(this.MOVIES_URL);
-            const movies = response.data;
-            this.movieCard = movies;
-        } catch (error) {
-            console.error(error);
+    props: {
+        title: {
+            type: String,
+            default: "movie",
+        },
+        length: {
+            type: String,
+            default: "movie length",
+        },
+        img: {
+            type: String,
+            default: "",
+        },
+        genre: {
+            type: String,
+            default: "",
         }
     },
+    data() {
+        return {
+            MOVIES_URL: 'http://localhost:3000/movies',
+            // SEANCES_URL: 'http://localhost:3000/seances',
+            movieCard: [],
+            // seancesCard: [],
+        }
+    },
+    methods: {
+        async getMovies() {
+            try {
+                const response = await axios.get(this.MOVIES_URL);
+                const movies = response.data;
+                this.movieCard = movies;
+            } catch (error) {
+                console.error(error);
+            }
+        },
     // async getSeances() {
     //     try {
     //         const response = await axios.get(this.SEANCES_URL);
@@ -90,15 +90,17 @@ export default {
     //         console.log(error);
     //     }
     // },
-    formatLength(lengthInMinutes = 0) {
-        const hours = Math.floor(lengthInMinutes/60);
-        const minutes = `0${lengthInMinutes%60}`.slice(-2);
-        return `${hours}:${minutes}`
+        formatLength(lengthInMinutes = 0) {
+            const hours = Math.floor(lengthInMinutes/60);
+            const minutes = `0${lengthInMinutes%60}`.slice(-2);
+            return `${hours}:${minutes}`
+        },
     },
-    currentDate() {
-        const currentDate = new Date().toLocaleDateString("en-GB", {weekday:"long", day:"2-digit", month:"2-digit", year:"numeric"});
-        return currentDate;
-    }
+    computed: {
+        currentDate() {
+            const currentDate = new Date().toLocaleDateString("en-GB", {weekday:"long", day:"2-digit", month:"2-digit", year:"numeric"});
+            return currentDate;
+        }
    },
    mounted() {
        this.getMovies();            
