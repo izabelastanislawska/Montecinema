@@ -1,7 +1,7 @@
 <template>
     <section class="container">
-        <h1 class="header__big">Screenings:</h1>    
-        <h1 class="header__big header--grey"> {{ currentDate }}</h1>
+        <BiggestHeader text="Screenings:" class="header--black"/>
+        <BiggestHeader :text="currentDate" class="header--grey"/>
         <!-- <h1 class="header__big header--grey"
             v-for="seances in seancesCard"
             :key="'s' + seances.id"
@@ -23,10 +23,12 @@
 <script>
 import axios from "axios";
 import MovieCard from "@/components/MovieCard.vue";
+import BiggestHeader from '@/components/BiggestHeader.vue';
 
 export default {
     components: {
-        MovieCard
+        MovieCard,
+        BiggestHeader
     },
     data() {
         return {

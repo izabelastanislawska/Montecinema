@@ -2,14 +2,24 @@
     <section class="container container__wrapper">
         <div class="hero">
             <div class="hero__wrapper">
-                <h1 class="header__big">Welcome to the best cinema in Monterail</h1>
-                   <p class="hero__text">Best movies, best experiences, best people. And all that doesn't exist. Yikes.</p>
+                <BiggestHeader text="Welcome to the best cinema in Monterail" theme="header--black"/>
+                <p class="hero__text">Best movies, best experiences, best people. And all that doesn't exist. Yikes.</p>
                 <button class="button">Book a ticket</button>
             </div>    
         </div>
         <img src="@/assets/audience.jpg" alt="Cinema hall with an audience" class="hero__img">
     </section>
 </template>
+
+<script>
+import BiggestHeader from '@/components/BiggestHeader.vue';
+
+export default {
+    components: {
+        BiggestHeader
+    }
+}
+</script>
 
 <style lang="scss">
 

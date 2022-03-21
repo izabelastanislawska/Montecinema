@@ -1,8 +1,8 @@
 <template>
     <section class="container login-register__wrapper">
         <div class="header__wrapper">
-            <h1 class="header__big header--black">Hi there!</h1>
-            <h1 class="header__big header--grey">Care to log in?</h1>
+            <BiggestHeader text="Hi there!" class="header--black"/>
+            <BiggestHeader text="Care to log in?" class="header--grey"/>
         </div>
             <form class="inputs__wrapper">
                 <CustomInput 
@@ -30,11 +30,13 @@
 <script>
 import CustomInput from "@/components/CustomInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
+import BiggestHeader from '@/components/BiggestHeader.vue';
 
 export default {
     components: {
         CustomInput,
-        PasswordInput
+        PasswordInput,
+        BiggestHeader
     },
     data() {
         return {
