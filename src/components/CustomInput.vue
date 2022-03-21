@@ -1,5 +1,5 @@
 <template>
-    <label >
+    <label class="input__wrapper">
         <span
             v-if="label"
             class="base-input__label">
@@ -38,7 +38,7 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .base-input {
     &__label {
         font-size: 1.4rem;
@@ -66,6 +66,11 @@
         outline: 1px $input-border-color solid;
         background-color: $input-background-color;
     }
+}
+
+.input__wrapper {
+    display: flex;
+    flex-direction: column;
 }
 
 </style>

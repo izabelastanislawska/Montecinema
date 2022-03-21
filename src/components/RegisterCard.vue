@@ -4,7 +4,7 @@
             <h1 class="header__big header--black">Ahoy you!</h1>
             <h1 class="header__big header--grey">Care to register?</h1>
         </div>
-        <form @submit.prevent="onSubmit" novalidate>
+        <form @submit.prevent="onSubmit" novalidate class="inputs__wrapper">
             <CustomInput 
                 v-model="email"
                 label="email"
@@ -17,14 +17,18 @@
                 placeholder="Enter your password"
                 @blur="passwordTouched = true"
                 />
-                <p> {{ emailError }}</p>
-                <p>{{ passwordError }}</p>
-                <p :class="{red: !passwordLength && passwordTouched}">At least 8 characters</p>
-                <p :class="{red: !passwordLetters && passwordTouched}">At least one letter</p>
-                <p :class="{red: !passwordDigits && passwordTouched}">At least one digit</p>
-            <router-link to="/login" class="header__link">Log in instead</router-link>
-            <button class="button button--small"
-            type="submit" :disabled="!isFormValid">Next step</button>
+                <div class="validation__wrapper">
+                    <p class="validation__text">{{ emailError }}</p>
+                    <p class="validation__text">{{ passwordError }}</p>
+                    <p class="validation__text" :class="{validation__error: !passwordLength && passwordTouched}">At least 8 characters</p>
+                    <p class="validation__text" :class="{validation__error: !passwordLetters && passwordTouched}">At least one letter</p>
+                    <p class="validation__text" :class="{validation__error: !passwordDigits && passwordTouched}">At least one digit</p>
+                </div>
+                <div class="buttons__wrapper">
+                    <router-link to="/login" class="header__link login__button">Log in instead</router-link>
+                    <button class="button button--small login__button"
+                    type="submit" :disabled="!isFormValid">Next step</button>
+                </div>
         </form>
     </section>
 </template>
@@ -107,11 +111,22 @@ export default {
 
 </script>
 
-<style lang="scss" scoped>
-.red {
-    color: red;
+<style lang="scss">
+.header__wrapper {
+    margin: 4rem;
 }
-.green {
-    color: green;
+.validation__wrapper {
+    margin-bottom: 3rem;
+}
+.validation__text {
+    font-size: 1.4rem;
+    font-family: $primary-font;
+    line-height: 170%;
+}
+.validation__error {
+    color: $button-color;
+}
+.validation__success {
+    color: $success-color;
 }
 </style>

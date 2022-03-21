@@ -1,6 +1,6 @@
 <template>
     <label>
-        <div class="input__wrapper">
+        <div class="span__wrapper">
             <span
                 v-if="label"
                 class="base-input__label">
@@ -89,25 +89,20 @@
     }
 }
 
-.input__wrapper {
+.span__wrapper {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
 }
 
 .button__password {
     border: none;
     background: none;
     position: absolute;
-    top: 10px;
+    top: 30%;
     right: 10px;
     cursor: pointer;
     opacity: 1;
 }
-
-.show {
-    display: block;
-}
-
-
 
 </style>

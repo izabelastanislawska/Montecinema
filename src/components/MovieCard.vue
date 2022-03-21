@@ -1,34 +1,21 @@
 <template>
     <section>
-        <div>
-            <h3>Title: {{ title }}</h3>
-            <p>Movie length: {{ length }} min.</p>
-            <img :src="img" />
-            <p>Genre: {{ genre }}</p>
-        </div>
+            <h3>Title: {{ movie.title }}</h3>
+            <p>Movie length: {{ movie.length }} min.</p>
+            <img :src="movie.poster_url" />
+            <p>Genre: {{ movie.genre.name }}</p>
     </section>
 </template>
 
 <script>
+
 export default {
-    name: "MovieCard",
     props: {
-        title: {
-            type: String,
-            default: ""
-        },
-        genre: {
-            type: String,
-            default: ""
-        },
-        img: {
-            type: String,
-            default: ""
-        },
-        length: {
-            type: String,
-            default: ""
+        movie: {
+            type: Object,
+            required: true
         }
     }
 }
+
 </script>

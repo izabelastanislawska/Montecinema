@@ -27,7 +27,7 @@
     }
 
       &__link {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
         font-weight: 500;
         color: $button-color;
         margin-right: 4rem;
