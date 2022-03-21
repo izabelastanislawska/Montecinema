@@ -55,11 +55,7 @@ export default {
     //         console.log(error);
     //     }
     // },
-        formatLength(lengthInMinutes = 0) {
-            const hours = Math.floor(lengthInMinutes/60);
-            const minutes = `0${lengthInMinutes%60}`.slice(-2);
-            return `${hours}:${minutes}`
-        },
+        
     },
     computed: {
         currentDate() {
