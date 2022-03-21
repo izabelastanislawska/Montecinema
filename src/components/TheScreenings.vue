@@ -10,65 +10,30 @@
             :hall="seances.hall">
             {{  new Date(seances.datetime).toLocaleDateString("en-GB", {weekday:"long", day:"2-digit", month:"2-digit", year:"numeric"})}}
             </h1> -->
-        <div
-            v-for="movie in movieCard"
-            :key="'m-' + movie.id"
-            :title="movie.title"
-            :img="movie.poster_url"
-            :genre="movie.genre.name"
-            :length="movie.length"
-            :description="movie.description">
-            
-            <h2>Title: {{ movie.title }}</h2>
-            <p>Genre: {{ movie.genre.name }}</p>
-            <p>Movie length: {{ formatLength(movie.length) }}</p>
-            <img :src="movie.poster_url" />
-        </div>
         
-        <!-- <MovieCard v-model="movieCard">
-            <h3>Title: {{ title }}</h3>
-            <p>Movie length: {{ length }} min.</p>
-            <img :src="img" />
-            <p>Genre: {{ genre }}</p>
-        </MovieCard> -->
+        <MovieCard 
+            v-for="movie in movieCard"
+            :key='"m" + movie.id'
+            :movie="movie">
+        </MovieCard>
 
     </section>
 </template>
 
 <script>
 import axios from "axios";
-// import MovieCard from "@/components/MovieCard.vue";
+import MovieCard from "@/components/MovieCard.vue";
 
 export default {
-    
-    name: "TheScreenings",
     components: {
-        // MovieCard
-    },
-    props: {
-        title: {
-            type: String,
-            default: "movie",
-        },
-        length: {
-            type: String,
-            default: "movie length",
-        },
-        img: {
-            type: String,
-            default: "",
-        },
-        genre: {
-            type: String,
-            default: "",
-        }
+        MovieCard
     },
     data() {
         return {
             MOVIES_URL: 'http://localhost:3000/movies',
-            // SEANCES_URL: 'http://localhost:3000/seances',
+    //         // SEANCES_URL: 'http://localhost:3000/seances',
             movieCard: [],
-            // seancesCard: [],
+    //         // seancesCard: [],
         }
     },
     methods: {
