@@ -11,7 +11,6 @@
             :placeholder="placeholder"
             :type="type"
             class="base-input__input">
-                
     </label>
 </template>
 
