@@ -8,10 +8,15 @@
                 v-model="search"
                 label="search"
                 palceholder="What are you looking for?"
-                type="search"/>
-            <SelectInput 
+                type="search">
+            </CustomInput>
+                
+            <SelectInput
+                v-model="selected"
+                placeholder="All categories"
                 label="category"
-                />
+                :options="options">
+            </SelectInput>
         </div>
         
     </section>
@@ -35,7 +40,16 @@ export default {
     data() {
         return {
             search: '',
-            categories: ''
+            label: '',
+            selected: '',
+            options: [
+                { text: 'Action', value: 'B' },
+                { text: 'Comedy', value: 'C' },
+                { text: 'Family', value: 'D' },
+                { text: 'Fantasy', value: 'E' },
+                { text: 'Romance', value: 'F' },
+                { text: 'Sci-fi', value: 'G' },
+            ]
         }
     }
 }

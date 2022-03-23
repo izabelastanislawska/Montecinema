@@ -1,23 +1,20 @@
 <template>
     <label>
         <span
-        v-if="label"
-        class="base-input__label">
-        {{ label }}
-        </span>
-        <select v-model="selected"> 
-            <option
-            :v-for="option in options"
-            :value="option.value">
+            v-if="label"
+            class="base-input__label">
+            {{ label }}
+            </span>
+        <select :value="value"
+            @change="$emit('input', $event.target.value)"
+            >
+            <option disabled value=""> {{ placeholder }}</option>
+            <option 
+                v-for="option in options"
+                :key="option.value"
+                :value="option.value">
                 {{ option.text }}
             </option>
-            <!-- <option disabled value="">All categories</option>
-            <option> Action </option>
-            <option> Comedy </option>
-            <option> Family </option>
-            <option> Fantasy </option>
-            <option> Romance </option>
-            <option> Sci-fi </option> -->
         </select>
     </label>
 </template>
@@ -25,15 +22,21 @@
 <script>
     export default {
         props: {
+            options: {
+                type: Array,
+                require: true
+            },
             label: {
                 type: String,
                 default: ''
-            }
-        },
-        data() {
-            return {
-                selected: 'A',
-                options: []
+            },
+            value: {
+                type: String,
+                default: ''
+            },
+            placeholder: {
+                type: String,
+                default: ''
             }
         }
     }
