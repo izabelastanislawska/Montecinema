@@ -1,6 +1,6 @@
 <template>
     <section class="container contact-us">
-        <h1 class="header__big">Contact us</h1>
+        <BiggestHeader text="Contact us" class="header--black"/>
         <section class="address__wrapper">
             <address>
                 <div class="img__wrapper">
@@ -22,6 +22,17 @@
         </section>
     </section>
 </template>
+
+<script>
+import BiggestHeader from '@/components/BiggestHeader.vue';
+
+export default {
+    components: {
+        BiggestHeader
+    }
+}
+
+</script>
 
 <style scoped lang="scss">
 .contact-us {

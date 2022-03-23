@@ -1,8 +1,8 @@
 <template>
     <section class="container login-register__wrapper">
         <div class="header__wrapper">
-            <h1 class="header__big header--black">Ahoy you!</h1>
-            <h1 class="header__big header--grey">Care to register?</h1>
+            <BiggestHeader text="Ahoy you!" class="header--black"/>
+            <BiggestHeader text="Care to register?" class="header--grey"/>
         </div>
         <form @submit.prevent="onSubmit" novalidate class="inputs__wrapper">
             <CustomInput 
@@ -36,11 +36,13 @@
 <script>
 import CustomInput from "@/components/CustomInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
+import BiggestHeader from '@/components/BiggestHeader.vue';
 
 export default {
     components: {
         CustomInput,
-        PasswordInput
+        PasswordInput,
+        BiggestHeader
     },
     data() {
         return {

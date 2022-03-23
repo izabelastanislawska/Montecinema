@@ -11,7 +11,6 @@
             <router-link to="/login" class="button button--small">Login</router-link>
         </div>
     </header>
-  
 </template>
 
 
