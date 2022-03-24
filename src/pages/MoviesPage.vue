@@ -1,18 +1,21 @@
 <template>
-    <section>
+    <section class="container">
         <MainHeader/>
-        <BiggestHeader text="All Movies" theme="header--black"></BiggestHeader>
+        <TheBreadcrumb/>
+        <AllMovies/>
     </section>
 </template>
 
 <script>
 import MainHeader from '@/components/MainHeader.vue';
-import BiggestHeader from '@/components/BiggestHeader.vue';
+import TheBreadcrumb from '@/components/TheBreadcrumb.vue';
+import AllMovies from '@/components/AllMovies.vue';
 
 export default {
     components: {
         MainHeader,
-        BiggestHeader
+        TheBreadcrumb,
+        AllMovies
     }
 }
 </script>

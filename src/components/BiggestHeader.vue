@@ -20,10 +20,10 @@ export default {
 
 <style lang="scss" scoped>
 .header__big {
-        font-size: 8rem;
-        font-family: $tertiary-font;
-        font-weight: 600;
-        line-height: 102%;
+    font-size: 8rem;
+    font-family: $tertiary-font;
+    font-weight: 600;
+    line-height: 102%;
 }
 
 .header--black {
