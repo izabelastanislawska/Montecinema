@@ -5,12 +5,12 @@
             class="base-input__label">
             {{ label }}
             </span>
-        <select :value="value"
-            @change="$emit('input', $event.target.value)"
-            >
+        <select 
+            :value="value"
+            @change="$emit('input', $event.target.value)">
             <option disabled value=""> {{ placeholder }}</option>
             <option 
-                v-for="option in options"
+                v-for="option in selectOptions"
                 :key="option.value"
                 :value="option.value">
                 {{ option.text }}
@@ -22,7 +22,7 @@
 <script>
     export default {
         props: {
-            options: {
+            selectOptions: {
                 type: Array,
                 require: true
             },
