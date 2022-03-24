@@ -10,7 +10,7 @@
             @change="$emit('input', $event.target.value)">
             <option disabled value=""> {{ placeholder }}</option>
             <option 
-                v-for="option in selectOptions"
+                v-for="option in options"
                 :key="option.value"
                 :value="option.value">
                 {{ option.text }}
@@ -22,7 +22,7 @@
 <script>
     export default {
         props: {
-            selectOptions: {
+            options: {
                 type: Array,
                 require: true
             },

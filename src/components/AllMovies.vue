@@ -10,10 +10,10 @@
             </CustomInput>
                     
             <SelectInput
-                v-model="selectedOption"
+                v-model="selectedCategory"
                 placeholder="All categories"
                 label="category"
-                :selectOptions="selectOptions">
+                :options="categoryOptions">
             </SelectInput>
         </div>
     </section>
@@ -33,8 +33,8 @@ export default {
     data() {
         return {
             search: '',
-            selectedOption: '',
-            selectOptions: [
+            selectedCategory: '',
+            categoryOptions: [
                 { text: 'Action', value: 'B' },
                 { text: 'Comedy', value: 'C' },
                 { text: 'Family', value: 'D' },

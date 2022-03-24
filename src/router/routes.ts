@@ -1,12 +1,12 @@
 import VueRouter from 'vue-router';
 
 import HomePage from '@/pages/HomePage.vue';
-import ContactPage from '@/pages/ContactPage';
-import MoviesPage from '@/pages/MoviesPage';
-import ScreeningsPage from '@/pages/ScreeningsPage';
-import LogInPage from '@/pages/LogInPage';
-import ThePost from '@/components/ThePost';
-import RegisterPage from '@/pages/RegisterPage';
+import ContactPage from '@/pages/ContactPage.vue';
+import MoviesPage from '@/pages/MoviesPage.vue';
+import ScreeningsPage from '@/pages/ScreeningsPage.vue';
+import LogInPage from '@/pages/LogInPage.vue';
+import ThePost from '@/components/ThePost.vue';
+import RegisterPage from '@/pages/RegisterPage.vue';
 
 const routes = [
   {
