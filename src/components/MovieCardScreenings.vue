@@ -7,6 +7,7 @@
                 <BaseTag :text="movie.genre.name" theme="tag--red"></BaseTag>
                 <BaseTag :text="formatLength(movie.length)"></BaseTag>
             </div>
+            <BaseTag :text="'19:00'" theme="tag--red-border"></BaseTag>
         </div>
             
     </section>
@@ -33,7 +34,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -51,10 +51,9 @@ export default {
             font-weight: 700;
             font-size: 2.4rem;
         }
-    }
-
-    .movie-card__img {
-        width: 9.8rem;
-        height: 13.2rem
+        &__img {
+            width: 9.8rem;
+            height: 13.2rem
+        }
     }
 </style>

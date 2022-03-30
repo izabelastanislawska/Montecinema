@@ -2,24 +2,24 @@
     <section class="container">
         <BiggestHeader text="Screenings:" class="header--black"/>
         <BiggestHeader :text="currentDate" class="header--grey"/>
-        
-        <MovieCard
-            v-for="movie in movies"
-            :key='"m" + movie.id'
-            :movie="movie">
-        </MovieCard>
+
+        <MovieCardScreenings
+                v-for="movie in movies"
+                :key='"m" + movie.id'
+                :movie="movie">
+        </MovieCardScreenings>
 
     </section>
 </template>
 
 <script>
 import BiggestHeader from '@/components/BiggestHeader.vue';
-import MovieCard from '@/components/MovieCard.vue';
+import MovieCardScreenings from '@/components/MovieCardScreenings.vue';
 
 export default {
     components: {
         BiggestHeader,
-        MovieCard
+        MovieCardScreenings
     },
     computed: {
         movies() {
@@ -35,3 +35,5 @@ export default {
         }
 };
 </script>
+
+
