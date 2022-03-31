@@ -45,7 +45,6 @@
 </template>
 
 <script>
-import axios from "axios";
 import BiggestHeader from '@/components/BiggestHeader.vue';
 import CustomInput from '@/components/CustomInput.vue';
 import SelectInput from "@/components/SelectInput.vue";
@@ -61,9 +60,7 @@ export default {
         BaseTag
     },
     data() {
-        return { 
-            movieCard: [],
-            MOVIES_URL: 'http://localhost:3000/movies',
+        return {
             search: '',
             selectedCategory: '',
             categoryOptions: [
@@ -77,29 +74,23 @@ export default {
         }
     },
     computed: {
+        movies() {
+            return this.$store.state.movies;
+        },
         filteredMovies() {
-            let filteredMovie = this.movieCard.filter(movie => movie.title.toLowerCase().includes(this.search.toLowerCase()))
+            let filteredMovie = this.movies.filter(movie => movie.title.toLowerCase().includes(this.search.toLowerCase()))
             return filteredMovie.filter(movie => movie.genre.name.toLowerCase().includes(this.selectedCategory.toLowerCase()))
-        }
+        },
     },
     methods: {
-        async getMovies() {
-            try {
-                const response = await axios.get(this.MOVIES_URL);
-                const movies = response.data;
-                this.movieCard = movies;
-            } catch (error) {
-                console.error(error);
-            }
-        },
         formatLength(lengthInMinutes = 0) {
             const hours = Math.floor(lengthInMinutes/60);
             const minutes = `0${lengthInMinutes%60}`.slice(-2);
             return `${hours}h ${minutes} min`
         }
     },
-    mounted() {
-       this.getMovies();      
+    async mounted() {
+        this.$store.dispatch("fetchMovies");
     }
 }
 </script>

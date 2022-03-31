@@ -6,7 +6,6 @@
             <div>
                 <BaseTag :text="movie.genre.name" theme="tag--red"></BaseTag>
                 <BaseTag :text="formatLength(movie.length)"></BaseTag>
-                
             </div>
         </div>
             
