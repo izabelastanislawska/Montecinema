@@ -1,14 +1,15 @@
 <template>
-    <label>
+    <label class="select__wrapper">
         <span
             v-if="label"
-            class="base-input__label">
+            class="select__label">
             {{ label }}
             </span>
         <select 
             :value="value"
-            @change="$emit('input', $event.target.value)">
-            <option disabled value=""> {{ placeholder }}</option>
+            @change="$emit('input', $event.target.value)"
+            class="select">
+            <option value=""> {{ placeholder }}</option>
             <option 
                 v-for="option in options"
                 :key="option.value"
@@ -42,6 +43,29 @@
     }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.select {
+    font-family: $secondary-font;
+    font-size: 1.8rem;
+    color: $placeholder-color;
+    background-color: $input-color;
+    padding: 1.7rem 2.4rem;
+    border-radius: 8px;
+    border: none;
+    margin-bottom: 5rem;
+    &__label {
+        font-size: 1.4rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $button-color;
+        align-self: flex-start;
+        margin-bottom: 2rem;
+    }
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+    }
+}
 
 </style>
