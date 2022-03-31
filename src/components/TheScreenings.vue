@@ -8,7 +8,6 @@
                 :key='"m" + movie.id'
                 :movie="movie">
         </MovieCardScreenings>
-
     </section>
 </template>
 
@@ -32,7 +31,8 @@ export default {
    },
    async mounted() {
             this.$store.dispatch("fetchMovies");
-        }
+    }
+    
 };
 </script>
 
