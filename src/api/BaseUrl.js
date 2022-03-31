@@ -6,13 +6,8 @@ export const getMovies = async () => {
     try {
         return await axios.get(`${BASE_URL}/movies`)
     } catch (error) {
-        const errorMessage = (error && error.message) || "Something went wrong. Reload your page or try again later."
-        this.$notify({
-            group: 'error',
-            title: 'Unable to load data',
-            text: errorMessage,
-        }) 
-    } 
+        console.error(error);
+    }
 };
 
 const getScreenings = async () => {
