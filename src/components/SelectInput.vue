@@ -45,14 +45,12 @@
 
 <style lang="scss" scoped>
 .select {
-    font-family: $secondary-font;
     font-size: 1.8rem;
     color: $placeholder-color;
     background-color: $input-color;
     padding: 1.7rem 2.4rem;
     border-radius: 8px;
     border: none;
-    margin-bottom: 5rem;
     &__label {
         font-size: 1.4rem;
         font-weight: 700;
