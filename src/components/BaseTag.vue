@@ -39,4 +39,12 @@
     border-radius: 25px;
     color: $white-color;
 }
+
+.tag--red-border {
+    border-radius: 25px;
+    border: 2px $button-color solid;
+    color: $button-color;
+    font-family: $primary-font;
+    margin: 0;
+}
 </style>
