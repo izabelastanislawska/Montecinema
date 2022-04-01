@@ -2,6 +2,7 @@
     <section class="container">
         <BiggestHeader text="Screenings:" class="header--black"/>
         <BiggestHeader :text="currentDate" class="header--grey"/>
+
         
         <MovieCardScreenings
             v-for="movie in movies"
@@ -43,3 +44,5 @@ export default {
     }
 };
 </script>
+
+
