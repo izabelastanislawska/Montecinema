@@ -55,7 +55,6 @@
         padding: 1.7rem 2.4rem;
         border-radius: 8px;
         border: none;
-        margin-bottom: 5rem;
     }
     &__input:hover {
         background-color: $input-hover-color;

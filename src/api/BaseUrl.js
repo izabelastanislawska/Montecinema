@@ -1,9 +1,13 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:3000';
+const BASE_URL = 'http://localhost:300';
 
 export const getMovies = async () => {
-    return await axios.get(`${BASE_URL}/movies`)
+    try {
+        return await axios.get(`${BASE_URL}/movies`)
+    } catch (error) {
+        console.error(error);
+    }
 };
 
 const getScreenings = async () => {
