@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const BASE_URL = 'http://localhost:300';
+const BASE_URL = 'http://localhost:3000';
 
 export const getMovies = async () => {
     try {
