@@ -2,12 +2,13 @@
     <section class="container">
         <BiggestHeader text="Screenings:" class="header--black"/>
         <BiggestHeader :text="currentDate" class="header--grey"/>
-
+        
         <MovieCardScreenings
-                v-for="movie in movies"
-                :key='"m" + movie.id'
-                :movie="movie">
+            v-for="movie in movies"
+            :key='"m" + movie.id'
+            :movie="movie">
         </MovieCardScreenings>
+
     </section>
 </template>
 
@@ -30,9 +31,15 @@ export default {
         }
    },
    async mounted() {
-            this.$store.dispatch("fetchMovies");
-        }
+       try {
+           await this.$store.dispatch("fetchMovies");
+        } catch (error) {
+            const errorMessage = (error && error.message) || "Something went wrong. Reload your page or try again later."
+            this.$notify({
+                title: error,
+                text: errorMessage,
+            })  
+        }   
+    }
 };
 </script>
-
-

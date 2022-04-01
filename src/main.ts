@@ -8,7 +8,7 @@ import Notofications from 'vue-notification';
 Vue.config.productionTip = false
 
 Vue.use(VueRouter);
-Vue.use(Notofications, {componentName: 'AppNotifications'});
+Vue.use(Notofications, {componentName: 'notifications'});
 
 new Vue({
   router,

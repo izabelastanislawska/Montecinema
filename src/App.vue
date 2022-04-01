@@ -1,5 +1,6 @@
 <template>
     <div>
+      <notifications width="500" position="bottom-center"/>
       <template v-if="error">
         <div class="app-error">
           <h1>Sorry</h1>

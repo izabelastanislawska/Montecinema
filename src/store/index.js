@@ -21,17 +21,9 @@ export default new Vuex.Store({
   },
   actions: {
     async fetchMovies({commit}) {
-      try {
       const {data} = await getMovies();
-      commit("setMovies", data);
-    } catch (error) {
-      const errorMessage = (error && error.message) || "Something went wrong. Reload your page or try again later."
-      this.$notify({
-          group: 'error',
-          title: 'Unable to load data',
-          text: errorMessage,
-      })      
-    }}
+        commit("setMovies", data);
+    }
   },
   modules: {
   }
