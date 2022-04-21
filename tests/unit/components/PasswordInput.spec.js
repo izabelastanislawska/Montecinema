@@ -5,7 +5,6 @@ const createComponent = () => mount(PasswordInput);
 
 const findEyeButton = (wrapper) => wrapper.find("button");
 const findInput = (wrapper) => wrapper.find("input");
-// const findInputText = (wrapper) => wrapper.find("input[type='text']");
 
 
 describe('PasswordInput.vue', () => {
