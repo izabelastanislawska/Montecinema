@@ -10,7 +10,8 @@
                 label="email"
                 placeholder="Something ending with monterail.com"
                 type="email"
-                @blur="emailTouched = true"/>
+                @blur="emailTouched = true"
+                data-email="emailInput"/>
             <PasswordInput
                 v-model="password"
                 label="password"
@@ -18,7 +19,7 @@
                 @blur="passwordTouched = true"
                 />
                 <div class="validation__wrapper">
-                    <p class="validation__text">{{ emailError }}</p>
+                    <p class="validation__text" data-spec="emailError">{{ emailError }}</p>
                     <p class="validation__text">{{ passwordError }}</p>
                     <p class="validation__text" :class="{validation__error: !passwordLength && passwordTouched}">At least 8 characters</p>
                     <p class="validation__text" :class="{validation__error: !passwordLetters && passwordTouched}">At least one letter</p>
@@ -27,7 +28,8 @@
                 <div class="buttons__wrapper">
                     <router-link to="/login" class="header__link login__button">Log in instead</router-link>
                     <button class="button button--small login__button"
-                    type="submit" :disabled="!isFormValid">Next step</button>
+                    type="submit" :disabled="!isFormValid"
+                    data-spec="button">Next step</button>
                 </div>
         </form>
     </section>

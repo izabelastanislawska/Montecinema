@@ -40,11 +40,6 @@ const routes = [
     component: RegisterPage
   },
   {
-    path: '/blog/post/:number',
-    name: 'ThePost',
-    component: ThePost
-  },
-  {
     path: '*',
     redirect: '/'
   }
