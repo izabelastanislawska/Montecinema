@@ -5,7 +5,6 @@ import ContactPage from '@/pages/ContactPage.vue';
 import MoviesPage from '@/pages/MoviesPage.vue';
 import ScreeningsPage from '@/pages/ScreeningsPage.vue';
 import LogInPage from '@/pages/LogInPage.vue';
-import ThePost from '@/components/ThePost.vue';
 import RegisterPage from '@/pages/RegisterPage.vue';
 
 const routes = [
