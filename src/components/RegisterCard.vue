@@ -28,9 +28,10 @@
                     <p class="validation__text" :class="{validation__error: !passwordDigits && passwordTouched}" data-spec='pass-1-dig'>At least one digit</p>
                 </div>
                 <div class="buttons__wrapper">
-                    <router-link to="/login" class="header__link login__button">Log in instead</router-link>
-                    <button class="button button--small login__button"
-                    type="submit" :disabled="!isFormValid">Next step</button>
+                    <router-link :to="{ name: 'LogIn' }" class="header__link login__button">Log in instead</router-link>
+                        <button
+                        class="button button--small register__button" 
+                        type="submit" :disabled="!isFormValid">Next step</button>
                 </div>
         </form>
     </section>
@@ -46,7 +47,7 @@ export default {
     components: {
         CustomInput,
         PasswordInput,
-        BiggestHeader
+        BiggestHeader,
     },
     data() {
         return {
@@ -118,6 +119,9 @@ export default {
 </script>
 
 <style lang="scss">
+.register__button {
+    width: 100%;
+}
 .header__wrapper {
     margin: 4rem;
 }

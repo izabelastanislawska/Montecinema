@@ -6,6 +6,7 @@ import MoviesPage from '@/pages/MoviesPage.vue';
 import ScreeningsPage from '@/pages/ScreeningsPage.vue';
 import LogInPage from '@/pages/LogInPage.vue';
 import RegisterPage from '@/pages/RegisterPage.vue';
+import RegisterSecondStepPage from '@/pages/RegisterSecondStepPage.vue';
 
 const routes = [
   {
