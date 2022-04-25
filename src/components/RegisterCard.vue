@@ -4,25 +4,28 @@
             <BiggestHeader text="Ahoy you!" class="header--black"/>
             <BiggestHeader text="Care to register?" class="header--grey"/>
         </div>
-        <form @submit.prevent="onSubmit" novalidate class="inputs__wrapper">
+        <form @submit.prevent="onSubmit" novalidate class="inputs__wrapper" data-spec="form">
             <CustomInput 
                 v-model="email"
                 label="email"
                 placeholder="Something ending with monterail.com"
                 type="email"
-                @blur="emailTouched = true"/>
+                @blur="emailTouched = true"
+                data-spec='emailInput'
+                />
             <PasswordInput
                 v-model="password"
                 label="password"
                 placeholder="Enter your password"
                 @blur="passwordTouched = true"
+                data-spec='passwordInput'
                 />
                 <div class="validation__wrapper">
-                    <p class="validation__text">{{ emailError }}</p>
-                    <p class="validation__text">{{ passwordError }}</p>
-                    <p class="validation__text" :class="{validation__error: !passwordLength && passwordTouched}">At least 8 characters</p>
-                    <p class="validation__text" :class="{validation__error: !passwordLetters && passwordTouched}">At least one letter</p>
-                    <p class="validation__text" :class="{validation__error: !passwordDigits && passwordTouched}">At least one digit</p>
+                    <p class="validation__text" data-spec="emailError">{{ emailError }}</p>
+                    <p class="validation__text" data-spec='passwordError'>{{ passwordError }}</p>
+                    <p class="validation__text" :class="{validation__error: !passwordLength && passwordTouched}" data-spec='pass-8-char'>At least 8 characters</p>
+                    <p class="validation__text" :class="{validation__error: !passwordLetters && passwordTouched}" data-spec='pass-1-lett'>At least one letter</p>
+                    <p class="validation__text" :class="{validation__error: !passwordDigits && passwordTouched}" data-spec='pass-1-dig'>At least one digit</p>
                 </div>
                 <div class="buttons__wrapper">
                     <router-link :to="{ name: 'LogIn' }" class="header__link login__button">Log in instead</router-link>
@@ -40,6 +43,7 @@ import PasswordInput from "@/components/PasswordInput.vue";
 import BiggestHeader from '@/components/BiggestHeader.vue';
 
 export default {
+    name: "RegisterCard",
     components: {
         CustomInput,
         PasswordInput,

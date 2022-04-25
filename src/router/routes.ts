@@ -5,7 +5,6 @@ import ContactPage from '@/pages/ContactPage.vue';
 import MoviesPage from '@/pages/MoviesPage.vue';
 import ScreeningsPage from '@/pages/ScreeningsPage.vue';
 import LogInPage from '@/pages/LogInPage.vue';
-import ThePost from '@/components/ThePost.vue';
 import RegisterPage from '@/pages/RegisterPage.vue';
 import RegisterSecondStepPage from '@/pages/RegisterSecondStepPage.vue';
 
@@ -39,16 +38,6 @@ const routes = [
     path: '/register',
     name: 'Register',
     component: RegisterPage
-  },
-  {
-    path: '/register-second-step',
-    name: 'RegisterSecondStep',
-    component: RegisterSecondStepPage
-  },
-  {
-    path: '/blog/post/:number',
-    name: 'ThePost',
-    component: ThePost
   },
   {
     path: '*',
