@@ -17,6 +17,9 @@ import ContactUs from "@/components/ContactUs.vue";
 
 export default {
   name: 'App',
+  metaInfo: {
+    title: "Welcome to Montecinema!"
+  },
   components: {
     MainHeader,
     TheHero,

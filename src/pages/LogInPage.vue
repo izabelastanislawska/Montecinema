@@ -15,6 +15,9 @@ export default {
   components: {
     LogInRegisterHeader,
     LogInCard
+  },
+  metaInfo: {
+    title: 'Log in to Montecinema!'
   }
 }
 
