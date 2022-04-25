@@ -16,6 +16,9 @@ export default {
         LogInRegisterHeader,
         RegisterCard,
         RegisterCardSecondStep
+    },
+    metaInfo: {
+        title: 'Register to Montecinema!'
     }
 }
 </script>

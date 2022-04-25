@@ -23,6 +23,10 @@ export default {
       error: null
     }
   },
+  metaInfo: {
+    title: 'Welcome!',
+    titleTemplate: '%s | Montecinema'
+  },
   methods: {
     reloadPage() {
       window.location.reload()

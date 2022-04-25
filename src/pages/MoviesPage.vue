@@ -16,6 +16,9 @@ export default {
         MainHeader,
         TheBreadcrumb,
         AllMovies
+    },
+    metaInfo: {
+        title: 'See all movies in Montecinema!'
     }
 }
 </script>

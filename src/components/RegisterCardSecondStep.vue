@@ -10,18 +10,21 @@
                 label="first name"
                 placeholder="e.g. Jessica"
                 type="text"
+                required
             />
             <CustomInput
                 v-model="text"
                 label="last name"
                 placeholder="e.g. Walton"
                 type="text"
+                required
             />
             <CustomInput
                 v-model="date"
                 label="date of birth"
                 placeholder="DD / MM / YYYY"
                 type="date"
+                required
             />
             <label class="privacy-policy__wrapper">
                 <input type="checkbox"/>
@@ -30,7 +33,7 @@
             <div class="buttons__wrapper">
                 <router-link :to="{ name: 'LogIn' }" class="header__link login__button">Log in instead</router-link>
                 <router-link to="/" class="login__button">
-                        <button class="button button--small register__button" type="submit" >Register</button>
+                        <button class="button button--small register__button" type="submit">Register</button>
                 </router-link>
             </div>
         </form>

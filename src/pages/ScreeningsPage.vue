@@ -11,6 +11,9 @@ import MainHeader from '@/components/MainHeader.vue';
 export default {
     components: {
         MainHeader
+    },
+    metaInfo: {
+        title: 'See movie screenings in Montecinema!'
     }
 }
 </script>
