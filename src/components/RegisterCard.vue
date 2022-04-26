@@ -37,7 +37,7 @@
     </section>
 </template>
 
-<script>
+<script lang="ts">
 import CustomInput from "@/components/CustomInput.vue";
 import PasswordInput from "@/components/PasswordInput.vue";
 import BiggestHeader from '@/components/BiggestHeader.vue';
@@ -69,7 +69,7 @@ export default {
             this.emailTouched = true;
             this.passwordTouched = true;
         },
-        isEmailValid(email) {
+        isEmailValid(email: string) {
             let emailRegExp =/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
             return email && emailRegExp.exec(email);
         }
@@ -96,21 +96,21 @@ export default {
             }
             return "";
         },
-        passwordLength() {
+        passwordLength(): boolean {
             return this.password.length > 7;
         },
-        passwordLetters() {
+        passwordLetters(): boolean {
             return /[a-z]/.test(this.password);
         },
-        passwordDigits() {
+        passwordDigits(): boolean {
             return /\d/.test(this.password);
         },
-        isPasswordValid() {
+        isPasswordValid(): string | boolean | boolean | boolean {
             return (
             this.password && this.passwordLength && this.passwordLetters && this.passwordDigits
             );
         },
-        isFormValid() {
+        isFormValid(): boolean {
             return !this.emailError && !this.passwordError;
         },
     }
