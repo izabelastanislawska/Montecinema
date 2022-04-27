@@ -19,11 +19,11 @@ export interface Movie {
 
 export default new Vuex.Store({
   state: {
-    movies: [] as Array<Movie>,
+    movies: [] as Movie[],
   },
   getters: {
     movie: (state) => (movieId: number) => {
-      return state.movies.find(movie => movie.id === movieId)
+      return state.movies.find((movie: { id: number }) => movie.id === movieId)
     },
     movies: (state) => state.movies,
   },

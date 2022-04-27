@@ -105,7 +105,7 @@ export default {
         passwordDigits(): boolean {
             return /\d/.test(this.password);
         },
-        isPasswordValid(): string | boolean | boolean | boolean {
+        isPasswordValid(): string | boolean {
             return (
             this.password && this.passwordLength && this.passwordLetters && this.passwordDigits
             );
