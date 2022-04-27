@@ -1,10 +1,10 @@
-import { mount } from '@vue/test-utils'
+import { mount, Wrapper } from '@vue/test-utils'
 import PasswordInput from '@/components/PasswordInput.vue';
 
 const createComponent = () => mount(PasswordInput);
 
-const findEyeButton = (wrapper) => wrapper.find("button");
-const findInput = (wrapper) => wrapper.find("input");
+const findEyeButton = (wrapper: Wrapper<Vue, Element>) => wrapper.find("button");
+const findInput = (wrapper: Wrapper<Vue, Element>) => wrapper.find("input");
 
 
 describe('PasswordInput.vue', () => {

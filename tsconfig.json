@@ -35,8 +35,7 @@
     "src/**/*.vue",
     "tests/**/*.ts",
     "tests/**/*.tsx",
-    "src/store/index.js"
-, "tests/unit/components/PasswordInput.spec.js"  ],
+  ],
   "exclude": [
     "node_modules"
   ]
